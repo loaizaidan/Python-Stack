@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% load static %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>Dojo Survey</title>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="text-center">Dojo Survey</h1>
+    <div id="form_div">
+      <form action="/result" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name*:</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="dojo_location">Dojo location:</label>
+          <select name="dojo_location" id="dojo_location" required>
+            <option value="Online">Online</option>
+            <option value="Jenin">Jenin</option>
+            <option value="Nablus">Nablus</option>
+            <option value="Tulkarem">Tulkarem</option>
+            <option value="Ramallah">Ramallah</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="favorite_language">Favorite Programming Language:</label>
+          <select name="favorite_language" id="favorite_language" required>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+            <option value="C++">C++</option>
+          </select>
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea name="comment" id="comment" class="form-control" cols="30" rows="10"></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

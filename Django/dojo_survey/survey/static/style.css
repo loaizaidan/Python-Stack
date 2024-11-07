@@ -1,0 +1,41 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    border: 2px 2px 2px 2px #333;
+    border-style: double;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    height: 40px;
+    width: 100px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+
+}
+
+.result{
+    text-decoration: underline;
+}

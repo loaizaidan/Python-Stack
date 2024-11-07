@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Great Number Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">  
+</head>
+<body>
+    <div class="container">
+            <h1>Welcome to the Great Number Game!</h1>
+            <h2>I am thinking of a number between 1 and 100!</h2>
+            <p>Take a guess</p>
+            <form action="/guess" method="post">
+                  {% csrf_token %}
+                <label for="guess">Your guess:</label>
+                <input autofocus type="number" placeholder="number" name="guess" required>
+                {% if request.session.attempts  < 10 %}
+                    <button type="submit">Submit</button>
+                {% endif %}
+            </form>
+            {% if request.session.feedback %}
+                <div class="feedback" style="background-color: {{ request.session.background }}">
+                    <p>{{ request.session.feedback }}</p>
+                </div>
+        {% endif %}
+        
+    </div>
+</body>
+</html>
