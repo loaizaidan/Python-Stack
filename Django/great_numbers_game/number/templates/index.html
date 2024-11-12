@@ -15,15 +15,15 @@
                   {% csrf_token %}
                 <label for="guess">Your guess:</label>
                 <input autofocus type="number" placeholder="number" name="guess" required>
-                {% if request.session.attempts  < 10 %}
+
                     <button type="submit">Submit</button>
-                {% endif %}
+           
             </form>
-            {% if request.session.feedback %}
+            
                 <div class="feedback" style="background-color: {{ request.session.background }}">
                     <p>{{ request.session.feedback }}</p>
                 </div>
-        {% endif %}
+            
         
     </div>
 </body>

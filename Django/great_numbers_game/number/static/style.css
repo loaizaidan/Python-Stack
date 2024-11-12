@@ -38,7 +38,7 @@ input[type="number"], input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: none;
     color: black;
     border-radius: 3px;
@@ -56,6 +56,6 @@ button:hover {
     padding: 15px;
     margin: 20px 0;
     border-radius: 5px;
-    color: white;
+    color: red;
 }
 

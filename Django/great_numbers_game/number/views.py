@@ -4,7 +4,7 @@ import random
 from django.contrib import *
 
 def index(request):
-    if request.method == 'POST':
+    if 'random_number' not in request.session:
         request.session['name'] = request.POST.get('name')
         request.session['random_number'] = random.randint(1, 100)
         request.session['feedback'] = None
@@ -13,10 +13,12 @@ def index(request):
     return render(request, 'index.html')
 
 def guess(request):
+
     if request.method == 'POST':
         user_guess = int(request.POST.get('guess'))
         random_number = request.session['random_number']
         difference = user_guess - random_number
+        print(request.session['feedback'])
 
         if difference == 0:
             request.session['feedback'] = 'Correct!'
