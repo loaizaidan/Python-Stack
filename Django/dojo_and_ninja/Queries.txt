@@ -1,0 +1,46 @@
+Queries
+
+
+>>> from dnApp.models import *
+
+>>> Loai = Dojo.objects.create(name="Loai", city="Ramallah", state="AA")
+>>> Ali = Dojo.objects.create(name="Ali", city="Hebron", state="AB")
+>>> Jalal = Dojo.objects.create(name="Jalal", city="Nablus", state="AA")
+
+
+
+>>> Loai.delete()
+(1, {'dnApp.Dojo': 1})
+>>> Ali.delete()
+(1, {'dnApp.Dojo': 1})
+>>> Jalal.delete()
+(1, {'dnApp.Dojo': 1})
+
+
+>>> Loai = Dojo.objects.create(name="Loai", city="Ramallah", state="AA")
+>>> Ali = Dojo.objects.create(name="Ali", city="Hebron", state="AB")
+>>> Jalal = Dojo.objects.create(name="Jalal", city="Nablus", state="AA")
+
+
+
+
+
+>>> ninja1 = Ninja.objects.create(first_name="Ninja", last_name="One", dojo=Loai)
+>>> ninja2 = Ninja.objects.create(first_name="Ninja", last_name="Two", dojo=Loai)
+>>> ninja3 = Ninja.objects.create(first_name="Ninja", last_name="Three", dojo=Loai)
+>>> ninja1 = Ninja.objects.create(first_name="Ninja", last_name="One", dojo=Ali)
+>>> ninja2 = Ninja.objects.create(first_name="Ninja", last_name="Two", dojo=Ali)
+>>> ninja3 = Ninja.objects.create(first_name="Ninja", last_name="Three", dojo=Ali)
+>>> ninja1 = Ninja.objects.create(first_name="Ninja", last_name="One", dojo=Jalal)
+>>> ninja2 = Ninja.objects.create(first_name="Ninja", last_name="Two", dojo=Jalal)
+>>> ninja3 = Ninja.objects.create(first_name="Ninja", last_name="Three", dojo=Jalal)
+
+
+>>> print(Loai.dojos.all())
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+
+>>> print(Ninja.objects.last())
+Ninja object (9)
+
+
