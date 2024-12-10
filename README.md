@@ -1,6 +1,6 @@
 # Axsos Academy Python Assignments
 
-Welcome to the AXSOS Academy Python Assignments repository! This repository holds a collection of Python assignments completed during my time at AXSOS Academy. It serves as a testament to my learning journey and growth in mastering Python programming.
+Welcome to the Axsos Academy Python Assignments repository! This repository holds a collection of Python assignments completed during my time at Axsos Academy. It serves as a testament to my learning journey and growth in mastering Python programming.
 
 ## Introduction
 
